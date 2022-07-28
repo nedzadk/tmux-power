@@ -19,12 +19,12 @@ tmux_set() {
 }
 
 # Options
-right_arrow_icon=$(tmux_get '@tmux_power_right_arrow_icon' '')
-left_arrow_icon=$(tmux_get '@tmux_power_left_arrow_icon' '')
+right_arrow_icon=$(tmux_get '@tmux_power_right_arrow_icon' '')
+left_arrow_icon=$(tmux_get '@tmux_power_left_arrow_icon' '')
 upload_speed_icon=$(tmux_get '@tmux_power_upload_speed_icon' '')
 download_speed_icon=$(tmux_get '@tmux_power_download_speed_icon' '')
 session_icon="$(tmux_get '@tmux_power_session_icon' '')"
-user_icon="$(tmux_get '@tmux_power_user_icon' '')"
+user_icon="$(tmux_get '@tmux_power_user_icon' 'גּ')"
 time_icon="$(tmux_get '@tmux_power_time_icon' '')"
 date_icon="$(tmux_get '@tmux_power_date_icon' '')"
 show_upload_speed="$(tmux_get @tmux_power_show_upload_speed false)"
@@ -132,8 +132,8 @@ fi
 tmux_set status-right "$RS"
 
 # Window status
-tmux_set window-status-format " #I:#W#F "
-tmux_set window-status-current-format "#[fg=$BG,bg=$G06]$right_arrow_icon#[fg=$TC,bold] #I:#W#F #[fg=$G06,bg=$BG,nobold]$right_arrow_icon"
+tmux_set window-status-format " #I #W "
+tmux_set window-status-current-format "#[fg=$BG,bg=$G06]$right_arrow_icon#[fg=$TC,bold] #I #W #[fg=$G06,bg=$BG,nobold]$right_arrow_icon"
 
 # Window separator
 tmux_set window-status-separator ""

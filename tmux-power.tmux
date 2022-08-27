@@ -36,6 +36,9 @@ date_format=$(tmux_get @tmux_power_date_format '%d-%m-%Y')
 # short for Theme-Colour
 TC=$(tmux_get '@tmux_power_theme' 'gold')
 case $TC in
+    'nechko')
+        TC='#FAD7A0'
+        ;;
     'gold' )
         TC='#ffb86c'
         ;;

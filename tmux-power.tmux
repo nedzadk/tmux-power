@@ -37,7 +37,7 @@ date_format=$(tmux_get @tmux_power_date_format '%d-%m-%Y')
 TC=$(tmux_get '@tmux_power_theme' 'nechko')
 case $TC in
     'nechko')
-        TC='#ffd1c8'
+        TC='#fcf3cf'
         ;;
     'gold' )
         TC='#ffb86c'
